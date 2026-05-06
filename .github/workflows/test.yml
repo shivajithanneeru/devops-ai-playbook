@@ -1,7 +1,11 @@
-name: Local Runner Test
-on: push
+name: Kind Runner Test
+on: workflow_dispatch # Allows you to run it manually from the Actions tab
+
 jobs:
-  test-job:
-    runs-on: arc-runner-set  # This must match your Helm installation name
+  check-kind:
+    runs-on: local-runner-set
     steps:
-      - run: echo "Hello from my kind cluster!"
+      - name: Who am I?
+        run: |
+          echo "Running on K8s node: $(hostname)"
+          kubectl version --client
