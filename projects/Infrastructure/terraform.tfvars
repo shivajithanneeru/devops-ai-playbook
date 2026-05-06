@@ -1,3 +1,4 @@
+user_profile = "shivajidevops"
 region = "us-east-1"
 vpc_name = "EKS-Demo-VPC"
 vpc_cidr = "10.1.0.0/16"

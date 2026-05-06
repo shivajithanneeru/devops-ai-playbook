@@ -1,3 +1,7 @@
+variable "user_profile" {
+  description="The user profile"
+  type = string
+}
 variable "region" {
   description="The name of the region"
   type = string
