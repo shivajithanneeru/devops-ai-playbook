@@ -9,7 +9,7 @@ env:
 
 jobs:
   build-and-push:
-    runs-on: [self-hosted, local-runner-set]
+    runs-on: my-kind-runner
 
     strategy:
       max-parallel: 2
@@ -62,7 +62,7 @@ jobs:
           docker push $IMAGE_URI
 
   update-manifests:
-    runs-on: [self-hosted, local-runner-set]
+    runs-on: my-kind-runner
     needs: build-and-push
     permissions:
       contents: write
