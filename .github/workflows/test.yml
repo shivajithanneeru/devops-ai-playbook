@@ -1,0 +1,7 @@
+name: Local Runner Test
+on: push
+jobs:
+  test-job:
+    runs-on: arc-runner-set  # This must match your Helm installation name
+    steps:
+      - run: echo "Hello from my kind cluster!"
