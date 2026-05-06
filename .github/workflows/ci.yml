@@ -9,7 +9,7 @@ env:
 
 jobs:
   build-and-push:
-    runs-on: local-runner-set
+    runs-on: [self-hosted, local-runner-set]
 
     strategy:
       max-parallel: 2
@@ -62,7 +62,7 @@ jobs:
           docker push $IMAGE_URI
 
   update-manifests:
-    runs-on: local-runner-set
+    runs-on: [self-hosted, local-runner-set]
     needs: build-and-push
     permissions:
       contents: write
