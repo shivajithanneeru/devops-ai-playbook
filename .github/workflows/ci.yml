@@ -12,6 +12,7 @@ jobs:
     runs-on: local-runner-set
 
     strategy:
+      max-parallel: 2
       matrix:
         service:
           - auth
